@@ -348,22 +348,22 @@ function Insight() {
                 </div>
               </div>
               {/* 버튼 영역 */}
-              <div className="flex justify-between mt-6 gap-2">
-                <button
-                  className="px-4 py-2 rounded bg-gray-100 text-gray-700 font-semibold hover:bg-gray-200 transition w-1/2"
-                  onClick={handleFilterReset}
-                  disabled={loading}
-                >
-                  초기화
-                </button>
-                <button
-                  className="px-4 py-2 rounded bg-blue-600 text-white font-semibold hover:bg-blue-700 transition w-1/2"
-                  onClick={handleFilterApply}
-                  disabled={loading}
-                >
-                  적용
-                </button>
-              </div>
+<div className="flex gap-2 mt-6">
+  <button
+    className="flex-1 bg-[#F5F5F5] text-[#1E1E1E] py-3 rounded-[12px] font-bold text-base hover:bg-gray-200 transition"
+    onClick={handleFilterReset}
+    disabled={loading}
+  >
+    초기화
+  </button>
+  <button
+    className="flex-1 bg-[#3EBD93] text-white py-3 rounded-[12px] font-bold text-base hover:bg-[#32a47f] transition"
+    onClick={handleFilterApply}
+    disabled={loading}
+  >
+    적용
+  </button>
+</div>
             </div>
           </div>
         )}

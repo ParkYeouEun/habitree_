@@ -254,7 +254,7 @@ function ReflectionForm({ onSave, onCancel, hideButtons, initialData, showToast 
         <div className="flex gap-2">
           <button
             type="submit"
-            className="btn-primary flex-1 rounded-[12px]"
+            className="flex-1 bg-[#3EBD93] text-white py-3 rounded-[12px] font-bold text-base hover:bg-[#32a47f] transition"
           >
             기록 저장
           </button>
@@ -379,7 +379,8 @@ function WorklogListAll() {
           업무 기록 목록
         </div>
         <button
-          className="btn-primary w-full md:w-auto px-5 py-2.5 text-base font-bold rounded-lg"
+          className="bg-[#3EBD93] text-white font-bold rounded-[12px] px-5 py-2.5 text-base shadow hover:bg-[#34b183] transition w-full md:w-auto"
+          style={{ minWidth: 140 }}
           onClick={() => setIsModalOpen(true)}
         >
           업무 기록 추가
@@ -446,18 +447,13 @@ function WorklogListAll() {
           </select>
           <span className="text-xs text-gray-500 mt-1">정렬</span>
         </div>
-        <div className="flex flex-col justify-end">
-<button
-            className="bg-transparent border border-[#3EBD93] text-[#3EBD93] font-medium text-[14px] rounded-[12px] h-10 px-4 transition hover:bg-[#E6F4EF] focus:outline-none"
-            onClick={() => {
-              setTempDateRange(dateRange);
-              setTempSelectedTags(selectedTags);
-              setShowFilterModal(true);
-            }}
-          >
-            필터
-          </button>
-        </div>
+        <button
+          className="bg-white border border-[#3EBD93] text-[#3EBD93] font-medium text-[14px] rounded-full px-4 py-1.5 transition hover:bg-[#3EBD93]/[0.08] focus:outline-none"
+          style={{ minWidth: 64 }}
+          onClick={() => setShowFilterModal(true)}
+        >
+          필터
+        </button>
       </div>
 
       {/* 필터 모달 */}
@@ -537,13 +533,13 @@ function WorklogListAll() {
             {/* 적용/초기화 버튼 */}
             <div className="flex gap-2 mt-6">
               <button
-                className="flex-1 bg-blue-600 text-white py-2 rounded font-bold hover:bg-blue-700 transition"
+                className="flex-1 bg-[#3EBD93] text-white py-3 rounded-[12px] font-bold text-base hover:bg-[#32a47f] transition"
                 onClick={applyFilter}
               >
                 적용
               </button>
               <button
-                className="flex-1 bg-gray-300 text-gray-700 py-2 rounded font-bold hover:bg-gray-400 transition"
+                className="flex-1 bg-[#F5F5F5] text-[#1E1E1E] py-3 rounded-[12px] font-bold text-base hover:bg-gray-200 transition"
                 onClick={resetFilter}
               >
                 초기화
